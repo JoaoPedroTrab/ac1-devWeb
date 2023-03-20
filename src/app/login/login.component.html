@@ -1,0 +1,14 @@
+<div>
+    <div class="mb-3">
+        <label for="user" class="form-label">Usuário</label>
+        <input [(ngModel)]="user" type="text" class="form-control" id="user" placeholder="Insira seu usuário...">
+    </div>
+    <div class="mb-3">
+        <label for="ac1" class="form-label">Senha</label>
+        <input [(ngModel)]="pass" type="password" class="form-control" id="password" placeholder="Insira sua senha...">
+    </div>
+    <button type="button" class="btn btn-primary" (click)="validaLogin()"> Logar</button>
+    <div *ngIf="!acesso" class="alert alert-danger" role="alert">
+        Usuário ou senha errados
+      </div>
+</div>
